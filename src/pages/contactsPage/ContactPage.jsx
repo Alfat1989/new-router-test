@@ -1,9 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import allApi from '../../api/api';
 import Form from '../../components/Forms/Form';
 
 const ContactsPage = () => {
-  // const memo=useMemo();
   const [todos, setTodos] = useState([]);
   const [deletedTodo, setDelitedTodo] = useState({});
 
@@ -19,8 +18,6 @@ const ContactsPage = () => {
     setDelitedTodo(data);
     return data;
   };
-
-  //   memo(addTodo())
 
   useEffect(() => {
     if (deletedTodo) {
