@@ -1,10 +1,12 @@
-const Input = ({ name, onInput, ...other }) => {
+const Input = ({ ...other }) => {
   return (
     <input
       type={other.type}
-      name={name}
+      name={other.name}
       value={other.value}
-      onInput={onInput}
+      onInput={other.onInput}
+      // autoComplete="off"
+      autocomplete="off"
     />
   );
 };
